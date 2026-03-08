@@ -1,4 +1,4 @@
-name: Python application
+name: Calculator application
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  testing:
 
     runs-on: ubuntu-latest
 
@@ -26,4 +26,4 @@ jobs:
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with unittest
       run: |
-        python simple_calculator/test_calculator.py
+        python test_calculator.py
